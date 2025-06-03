@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    transition: background-color 5s ease-in-out;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#content {
+    width: 360px;
+    font-size: x-large;
+}
+
+#fumo {
+    width: 360px;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+#counter {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
